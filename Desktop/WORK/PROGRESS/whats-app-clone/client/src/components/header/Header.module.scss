@@ -1,0 +1,59 @@
+@use '../../mixin.scss' as mixin;
+
+
+.con {
+    background: var(--app-bg-two);
+    padding: 1rem .3rem 1rem .75rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex: 1;
+
+
+    img {
+        border-radius: 100%;
+        width: 2.5rem;
+        height: 2.5rem;
+        object-fit: cover;
+    }
+}
+
+.contact__img_name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+
+    p {
+        color: var(--text-color);
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+}
+
+.icons__con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .75em;
+}
+
+.icons {
+    color: var(--icons-color); 
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.backArrow {
+    display: none;
+}
+
+@include mixin.mobile {
+    .backArrow {
+        display: inline-block;
+        color: #fff;
+    }
+}
+

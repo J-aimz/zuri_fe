@@ -1,0 +1,60 @@
+@use '../../mixin.scss' as mixin;
+.con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.con__content {
+    max-width: 350px;
+    margin-top: 2rem;
+
+    ul {
+        list-style: none;
+        padding: none;
+        margin-top: 2em;
+
+        li {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: 1rem;
+            gap: .5em;
+        }
+    }
+
+  
+}
+
+.icon_con {
+    display: flex;
+    justify-content: center;
+}
+
+.steps {
+    text-transform: uppercase;
+    margin-top: 1rem;
+    display: block;
+}
+
+.icon {
+    color: var(--color-red);
+    font-size: 2rem !important;
+}
+
+.icon_one {
+    font-size: 3rem !important;
+}
+
+button {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+@include mixin.mobile {
+    .icon_con {
+        justify-content: flex-start;
+    }
+    
+}

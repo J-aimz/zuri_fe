@@ -1,0 +1,12 @@
+.con {
+    background: var(--app-bg-two);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    img {
+        width: 100%;
+    }
+}

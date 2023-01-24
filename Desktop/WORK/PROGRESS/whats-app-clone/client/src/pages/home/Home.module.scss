@@ -1,0 +1,118 @@
+.con {
+    width: 100%;
+    height: 100vh;
+    // border: 1px solid red;
+}
+
+.nav {
+    width: 100%;
+    height: 5vh;
+    background: var(--unread-msg-bg);
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    background: #fff;
+}
+
+.LHS,
+.RHS {
+    display: flex;
+    justify-content: center;
+    height: inherit;
+    width: 100%;
+}
+
+.LHS {
+    align-items: flex-start;
+    div {
+        background-color: #CDF4DD;
+        width: 90%;
+        height: 80vh;
+        border-radius: 0 0 8px 8px;
+        padding: 2rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+
+        h1 {
+            margin-top: 2rem;
+            color: #366349;
+        }
+
+        p {
+            margin-top: 1em;
+            color: #537662;
+        }
+
+    }
+}
+
+.RHS {
+    align-items: flex-end;
+}
+
+.input__con {
+    background-color: #FDF2F0;
+    width: 90%;
+    margin-right: 5%;
+    height: 80vh;
+    border-radius: 8px 8px 0 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    
+    div {
+        display: flex;
+        // border: 1px solid red;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 70%;
+
+        & > * {
+            border: none;
+            outline: none;
+            border-radius: 4px;
+            width: 100%;
+        }
+    }
+
+    
+
+    input {
+        padding: .75rem .5rem  ;
+        color: #537662;
+        border: 1px solid #fbd9d4;
+
+        &::placeholder {
+            color: #9faea5;
+        }
+
+    }
+}
+
+button {
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: #FF6145;
+    color: #fff;
+    font-family: 700;
+    font-size: 16px;
+    letter-spacing: .04rem;
+}
+
+

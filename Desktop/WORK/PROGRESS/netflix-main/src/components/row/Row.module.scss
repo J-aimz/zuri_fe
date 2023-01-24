@@ -1,0 +1,98 @@
+@use '../../mixin.scss' as mixin;
+
+.con {
+    margin-bottom: 1.5rem;
+
+    h5 {
+        margin-left: 3rem;
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 20px !important;
+    }
+}
+
+.slider_con {
+    position: relative;
+}
+
+.btn {
+    position: absolute;
+    z-index: 10;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 2rem !important;
+    height: inherit;
+    color: rgba(255, 255, 255, 0.673);
+    background-color: rgba(17, 17, 17, 0.654);
+    margin: auto;
+    transition: all ease-in .25s;
+}
+
+.slider {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    scroll-behavior: smooth;
+    padding: 1em 0em;
+    position: relative;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+
+}
+
+.left_btn {
+    left: 0;
+    bottom: 0rem;
+    top: 0;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.rigth_btn {
+    right: 0;
+    top: 0;
+    bottom: 0rem;
+    border-radius: 4px 0px 0px 4px;
+}
+
+@include mixin.large {
+    .con {
+        margin-bottom: .5rem;
+    }
+
+    .slider_con {
+        margin-top: -.75rem !important;
+    }
+
+}
+
+@include mixin.tablet {
+    .con {
+        margin-bottom: -.5rem;
+    }
+    
+    .btn {
+        width: 2rem;
+    }
+
+    .con h5 {
+        margin-left: 2rem;
+    }
+}
+
+@include mixin.mobile {
+    .btn {
+        display: none;
+        visibility: hidden;
+    }
+
+    .con h5 {
+        margin-left: 1rem;
+    }
+}

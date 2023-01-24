@@ -1,0 +1,88 @@
+@use '../../mixin.scss' as mixin;
+
+
+.con {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    padding: 1rem;
+    gap: 2rem;
+
+    form {
+        flex: .7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+
+        span {
+            flex: .1;
+        }
+    }
+
+
+    input {
+        flex: .9;
+        width: 100%;
+        border-radius: 12px;
+        padding: .75em;
+        font-size: 16px;
+        background: var(--app-bg);
+        color: var(--icons-color);
+        border: none;
+        outline: none;
+    }
+
+    span {
+        flex: .1;
+    }
+
+    & span:first-child {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1rem;
+    }
+
+}
+
+.icons {
+    color: var(--icons-color);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+@include mixin.mobile {
+    .con {
+        gap: .5rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        form {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .7rem;
+        }
+
+        input {
+            flex: 1;
+            border-radius: 12px;
+            padding: .5em;
+        }
+
+        span {
+            flex: .1;
+        }
+
+        & span:first-child {
+            gap: .5rem;
+        }
+
+    }
+}
+

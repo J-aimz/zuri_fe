@@ -1,0 +1,132 @@
+@use '../../mixin.scss' as mixin;
+
+.hero__con {
+    height: 71.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+    left: 0;
+}
+
+.hero__content {
+    max-width: 800px;
+    padding: 2rem;
+    text-align: center;
+
+    h3 {
+        font-size: 1.7rem;
+    }
+
+    h5 {
+        margin-top: 1em;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+}
+
+.inputs_con {
+    margin-top: .3rem;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    height: 70px;
+
+    input {
+        padding: 1rem;
+        flex: .7;
+        border-radius: 4px 0 0 4px;
+        height: 70px;
+        display: block;
+    }
+
+    .btn {
+        flex: .3;
+        height: 70px !important;
+        text-transform: capitalize;
+        font-size: .9rem !important;
+        background-color: var(--color-red);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .2rem;
+        border-radius: 0px 4px 4px 0 !important;
+        color: #fff;
+        text-decoration: none;
+
+        .icon {
+            font-size: 1rem;
+        }
+    }
+}
+
+@include mixin.tablet {
+    .hero__con {
+        height: 60vh;
+    }
+
+    .hero__content {
+        max-width: 640px;
+
+        h5 {
+            font-size: 1.3rem;
+        }
+    }
+
+    .inputs_con {
+        margin-top: .5em;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        flex: 1;
+        height: min-content;
+    
+        input {
+            width: 100%;
+            border-radius: 4px;
+            height: 70px;
+            font-size: 17px;
+
+            &::placeholder {
+                font-size: 17px;
+            }
+        }
+    
+        .btn {
+            width: 30%;
+        }
+            
+    }
+    
+}
+
+@include mixin.mobile {
+    .hero__con {
+        height: 50vh;
+    }
+
+    .hero__content {
+        max-width: 451px;
+    }
+
+    .inputs_con {
+    
+        input {
+            font-size: 16px;
+            padding: .5rem;
+
+            &::placeholder {
+                font-size: 16px;
+            }
+        }
+    
+        .btn {
+            width: 50%;
+            font-size: 12px;
+        }
+            
+    }
+}
+

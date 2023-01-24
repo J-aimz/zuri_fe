@@ -1,0 +1,198 @@
+@use '../../mixin.scss' as mixin;
+
+.con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+     
+    small {
+        font-size: 14px;
+        margin-left: 1rem;
+    }
+}
+
+.content__con {
+    max-width: 978px;
+    width: 100%;
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: .5rem;flex-wrap: nowrap;
+        }
+    }
+    
+}
+
+.icons {
+    color: var(--color-red);
+}
+
+.plan__selection_con {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    flex: 1;
+    flex-direction: column;
+    margin-top: 1rem;
+    flex-wrap: nowrap;
+
+    width: 100%;
+}
+
+.top_con {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+
+}
+
+.gap,
+.gap_top {
+    flex: .4;
+    padding-left: 1rem;
+}
+
+.plan_btn {
+    flex: .15;
+    // width: 4rem;
+    width: auto;
+    height: 5rem;
+    padding: 1rem;
+    color: var(--color-red);
+    display: grid;
+    place-content: center;
+    background: var(--color-red);
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.body {
+    width: 100%;
+    color: var(--pri-footer-color);
+    font-size: 14px;
+}
+
+.body__item_con {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: .5px solid rgb(204, 204, 204);
+    // margin-top: 1rem;
+
+    span {
+        flex: .15;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: .2rem;
+       
+    }
+}
+
+.icon {
+    font-size: 1.5rem !important;
+}
+
+.btn_con {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        width: 440px;
+        margin-bottom: 12rem;
+    }
+}
+
+.features {
+    flex: .9;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+    span {
+        width: 5rem;
+        flex: 1;
+    }
+
+}
+
+@include mixin.large {
+    .features {
+        gap: 1.7rem;
+        flex: 1;
+    }
+}
+
+
+@include mixin.mobile {
+
+    .body__item_con {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top_con {
+        flex: 1;
+    }
+
+    .gap_top {
+        display: none;
+    }
+
+    .gap {
+        flex: 1;
+    }
+    
+    .body__item_con {
+        gap: .3rem;
+
+    }
+
+    .plan_btn {
+        flex: 1;
+        width: 1rem;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .features {
+        gap: 1rem;
+        display: flex;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+        flex: 1;
+
+        span {
+            width: auto;
+        }
+    }
+
+    .body {
+        display: none;
+    }
+
+   
+}

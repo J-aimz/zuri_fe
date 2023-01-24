@@ -1,0 +1,181 @@
+@use '../../mixin.scss' as mixin;
+
+.con {
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 20vh;
+    z-index: 20;
+    
+    padding: 4rem 0 2rem 3rem;
+    height: 45vh;
+    width: 100%;
+
+    h1 {
+        color: var(--color-red);
+        text-shadow: 0px 0px 8px var(--pri-footer-color);
+        width: 30%;
+        font-size: 2rem !important;
+    }
+
+    p {
+        color: #fff;
+        text-shadow: 0px 0px 6px var(--gray);
+        letter-spacing: .05em;
+        width: 35%;
+        font-size: 16px;
+    }
+
+}
+
+.btns__con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn__con_LHS {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+
+    & button:nth-child(2) {
+        background-color: rgba(51, 51, 51, 0.656) !important;
+        color: #fff;
+    }
+}
+
+.btn {
+    padding: .2rem !important;
+    font-size: 16px;
+    color: var(--pri-text-color);
+    width: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    background-color: #fff !important;
+}
+
+.icon {
+    font-size: 2rem !important;
+}
+
+.btn__con_RHS {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.circled {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.198);
+    border-radius: 100%;
+    padding: .5rem;
+    width: 40px;
+    height: 40px;
+}
+
+.mute_controls {
+    border-radius: 100%;
+    cursor: pointer;
+    color: #fff;
+}
+
+.controls_btn {
+    background-color: rgba(255, 255, 255, 0.198);
+    padding: .5em;
+    font-weight: 400;
+    font-size: 16px;
+    width: 100px;
+    border-left: 4px solid rgba(255, 255, 255, 0.463);
+    border-radius: 0 !important;
+    color: #fff;
+}
+
+@include mixin.large {
+    .con {
+        bottom: 10vh;
+        height: 45vh;
+        padding: 4rem 0 2rem 2rem;
+    }
+}
+
+@include mixin.tablet {
+    .con {
+        bottom: 10vh;
+        height: 30vh;
+        padding: 4rem 0 2rem 2rem;
+        
+
+        h1 {
+            font-size: 1.8rem !important;
+            line-height: 1.1 !important;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .btn {
+        width: 100px;
+    }
+}
+
+@include mixin.mobile {
+    .con {
+        padding: 1rem 0 .5rem 1rem;
+        height: 25vh;
+        bottom: 10vh !important;
+        
+
+        h1 {
+            font-size: 1rem !important;
+            width: 40%;
+        }
+
+        p {
+            width: 45%;
+        }
+    }
+
+    .btns__con {
+        margin-top: -2rem;
+    }
+
+    .btn {
+        width: 40px;
+        font-size: 12px !important;
+        width: auto;
+        height: auto;
+        gap: .2rem;
+        padding: .5rem;
+
+        .icon {
+            font-size: .5rem !important;
+        }
+    }
+
+    .btn__con_LHS {
+        gap: .5rem;
+    }
+
+    .btn__con_RHS {
+        gap: .5rem;
+    }
+
+    .controls_btn {
+        font-size: 14px;
+
+        padding: .3em;
+        border-left: none;
+        width: auto;
+    }
+}

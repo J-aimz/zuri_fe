@@ -1,0 +1,92 @@
+@use '../../mixin.scss' as mixin;
+
+.con {
+    
+
+    height: fit-content;
+    width: 100%;
+    
+    padding: 1rem 1rem;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    font-size: 14px;
+    color: gray;
+
+}
+
+.content {
+    width: 1180px;
+
+    
+}
+
+.socials {
+    height: 50px;
+
+}
+
+.links_con {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    
+}
+
+.links_con__sub {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .75rem;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+    a {
+        color: gray;
+        text-decoration: none;
+        font-weight: 500;
+        text-transform: capitalize;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.foot {
+    
+    button {
+        display: block;
+        background-color: transparent;
+        width: auto;
+        height: auto;
+        border: 1px solid;
+        padding: .5rem;
+        border-radius: 2px;
+        text-transform: capitalize;
+        font-size: 14px;
+        font-weight: 400;
+        color: gray;
+
+    }
+
+    span {
+        display: block;
+        margin-top: 1rem;
+    }
+}
+
+@include mixin.mobile {
+    .links_con {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        align-items: flex-start;
+
+    }
+}

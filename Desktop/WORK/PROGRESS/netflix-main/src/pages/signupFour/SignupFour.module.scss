@@ -1,0 +1,91 @@
+@use '../../mixin.scss' as mixin;
+
+.con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.content__con {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    max-width: 500px;
+}
+
+// .icon_con {
+//     display: flex;
+//     justify-content: center;
+// }
+
+.icon_one {
+    font-size: 3rem !important;
+    color: var(--color-red);
+}
+
+.steps {
+    text-transform: uppercase;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+.mt {
+    margin-top: .5rem;
+}
+
+.aling_right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 1.5rem;
+    font-size: 14px;
+}
+
+.icon_two {
+    color: #ffb53f;
+    font-size: 1rem !important;
+}
+
+.link {
+    margin-top: .2rem;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--pri-text-color);
+    padding: 1rem .75rem;
+    border: 1px solid var(--pri-footer-color);
+    border-radius: 6px;
+
+    & div {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: .3rem;
+    }
+
+    img {
+        width: 2rem;
+        
+    }
+}
+
+.icon_three {
+    color: var(--pri-footer-color);
+}
+
+@include mixin.mobile {
+    .content__con {
+        text-align: left;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}

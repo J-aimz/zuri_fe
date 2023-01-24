@@ -1,0 +1,38 @@
+@use '../../mixin.scss' as mixin;
+
+
+
+.con {
+    border-right: 1px solid var(--border);
+}
+
+.contact__list_con {
+    overflow-y: scroll;
+    height: calc(97vh - 4.5rem);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: var(--app-bg);
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: var(--app-bg-two);
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+        background: var(--app-bg-two);
+    }
+}
+
+
+
+@include mixin.mobile {
+    .con {
+        border-right: none;
+    }
+}

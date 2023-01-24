@@ -1,0 +1,83 @@
+@use '../../mixin.scss' as mixin;
+
+.con {
+    background: var(--bg-browse-page);
+    position: relative;
+}
+
+.con_header {
+    height: 100vh;
+    width: 100%;
+    // border: 1px solid red;
+    
+}
+
+.hero__con {
+    height: 93vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+
+}
+
+.rows_con {
+    margin-top: -25vh;
+    position: relative;
+    z-index: 10;
+}
+
+.video_con {
+    width: 100%;
+    position: relative;
+    // z-index: ;
+}
+
+.bg_gradient {
+    height: 20vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 1%, rgba(20, 20, 20, 0.685) 36%, rgb(20, 20, 20) 91%);
+}
+
+@include mixin.large {
+    .con_header {
+        height: 70vh;
+    }
+
+    .hero__con {
+        height: 68vh;
+    }
+
+    .rows_con {
+        margin-top: -5vh;
+    }
+
+}
+
+@include mixin.tablet {
+    .con_header {
+        height: 50vh;
+    }
+
+
+    .hero__con {
+        height: 45vh;
+    }
+}
+
+@include mixin.mobile {
+    .rows_con {
+        margin-top: -10vh;
+    }
+}

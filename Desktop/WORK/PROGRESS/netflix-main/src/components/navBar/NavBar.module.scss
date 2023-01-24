@@ -1,0 +1,66 @@
+@use '../../mixin.scss' as mixin;
+
+.con {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 30;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #8c8c8c3d;
+
+    img {
+        width: 6rem;
+        height: 2rem;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: 600;
+        color: var(--pri-text-color);
+        cursor: pointer;
+
+        &:hover{ 
+            text-decoration: underline;
+        }
+    }
+
+}
+
+.btn {
+    background: var(--color-red) !important;
+    text-transform: capitalize !important;
+
+}
+
+.nav_bg {
+    background: linear-gradient(180deg,#000 25%,transparent);
+    border-bottom: none;
+}
+
+@include mixin.tablet {
+
+}
+
+
+
+
+@include mixin.mobile {
+    .con {
+        padding: 1rem;
+    }
+    .con img {
+        width: 5rem;
+        height: 1.6em;
+    }
+
+    
+    .btn {
+    padding: 0rem !important;
+    font-size: 16px;
+
+    }
+}
