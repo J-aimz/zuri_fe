@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="./public/img.JPG" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jaimz Profile</title>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <img src="./public/./img.JPG" alt="Jaimz">
+      </div>
+      <div>
+        <div>
+          <span>Username: </span>
+          <h1 data-testid="slackUserName">Jaimz</h1>
+        </div>
+        <div>
+          <span>Day of the Week: </span>
+          <span data-testid="currentDayOfTheWeek" id="dayOfWeek"></span>
+        </div>
+        <div>
+          <span>Current UTC time: </span>
+          <span data-testid="currentUTCTime" id="currentTime"></span>
+        </div>
+        <div>
+          <span>Track: </span>
+          <span data-testid="myTrack">Frontend</span>
+        </div>
+        <div>
+          <span>GitHub: </span>
+          <a data-testid="“githubURL”" href="#" target="__blank">Frontend</a>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
+
